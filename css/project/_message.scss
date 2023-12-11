@@ -1,0 +1,92 @@
+@use "../setting/setting";
+
+.p-message{
+  padding: 40px 0;
+  background: #CFCFCF;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 32%;
+    width: 40%; /* 台形の幅を親要素の20%に設定 */
+    height: 100%;
+    background-color: #9E9E9E; /* 台形の色 */
+    transform: translateX(-50%) skewX(-20deg); /* 台形の傾きを設定 */
+    z-index: -1;
+    opacity: .6;
+  }
+}
+
+.p-message__contents{
+  margin: 24px auto 0;
+  max-width: 600px;  
+
+  h3{
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    margin-left: 12px;
+
+    &:after{
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: -24px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 1px;
+      background: #333;
+      z-index: 1;
+    }
+  }
+}
+
+.p-message__texts{
+  margin-top: 12px;
+  text-align: justify;
+
+  p{
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-message{
+    padding: 84px 0;
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12%; /* 台形の幅を親要素の20%に設定 */
+    height: 40%;
+    background: linear-gradient(270deg, #12479C 0.01%, #00A7E5 99.96%); /* 台形の色 */
+    transform: translateX(-50%) skewX(-20deg); /* 台形の傾きを設定 */
+    z-index: -1;
+  }
+  }
+
+  .p-message__contents{
+    h3{
+      font-size: 24px;
+      margin-left: 64px;
+
+      &:after{
+        width: 44px;
+        left: -64px;
+      }
+    }
+  }
+
+  .p-message__texts{
+    margin-top: 32px;
+    p{
+      margin-bottom: 34px;
+    }
+  }
+}

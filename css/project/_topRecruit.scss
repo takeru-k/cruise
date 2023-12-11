@@ -1,0 +1,73 @@
+@use "../setting/setting";
+
+.p-topRecruit{
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+
+  &:before{
+    content: "";
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 480px 800px;
+    border-color: transparent transparent rgba(51, 166, 228, 0.6) transparent;
+    z-index: -1;
+    left: 40%;
+    border-width: 0 0 780px 1000px
+  }
+}
+
+.p-topRecruit__lead{
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.p-topRecruit__texts{
+  margin-bottom: 40px;
+}
+
+.p-topRecruit__img{
+  position: relative;
+}
+
+@media (min-width: 768px){
+  .p-topRecruit__contents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .p-topRecruit__texts{
+    width: 40%;
+  }
+
+  .p-topRecruit__img{
+    width: 54%;    
+
+    img{
+      height: 100%;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .p-topRecruit{
+    padding: 88px 0;
+  }
+
+  .p-topRecruit__img{
+    margin-right: -60px;
+    height: 540px;
+    
+    
+    img{
+      overflow: visible;
+    }
+  }
+}

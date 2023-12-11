@@ -1,0 +1,87 @@
+@use "../setting/setting";
+
+.p-serviceWeb{
+  padding: 64px 0;
+  background: #CFCFCF;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 32%;
+    width: 40%; /* 台形の幅を親要素の20%に設定 */
+    height: 100%;
+    background-color: #9E9E9E; /* 台形の色 */
+    transform: translateX(-50%) skewX(-20deg); /* 台形の傾きを設定 */
+    z-index: -1;
+    opacity: .6;
+  }
+}
+
+.p-serviceWeb__title{
+  border-bottom: 1px solid #ddd;
+
+  span{
+    font-weight: bold;
+    position: relative;
+    color: setting.$color-main;
+    font-size: 14px;
+    margin-left: 6px;
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+      left: -14px;
+      height: 10px;
+      width: 10px;
+      background: setting.$color-main;
+    }
+  }
+
+  h3{
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+  }
+}
+
+.p-serviceWeb__texts{
+  max-width: 640px;
+}
+
+.p-serviceWeb__text{
+  margin-top: 12px;
+  text-align: justify;
+  margin-left: 4px;
+}
+
+@media (min-width: 768px){
+  .p-serviceWeb__contents{
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-serviceWeb{
+    padding: 100px 0;
+    margin-bottom: 64px;
+
+      &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12%; /* 台形の幅を親要素の20%に設定 */
+    height: 40%;
+    background: linear-gradient(270deg, #12479C 0.01%, #00A7E5 99.96%); /* 台形の色 */
+    transform: translateX(-50%) skewX(-20deg); /* 台形の傾きを設定 */
+    z-index: -1;
+  }
+  }
+}

@@ -1,0 +1,59 @@
+@use "../setting/setting";
+
+.p-profile{
+  display: block;
+  max-width: 600px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+
+  dl{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  dt{
+        padding: 24px 0 8px 0;
+    width: 100%;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    line-height: 1.75;
+}
+  
+  dd{
+    padding: 0 0 24px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    line-height: 1.75;
+    border-bottom: 1px solid #CCD3D3;
+  }
+}
+
+@media (min-width: 768px){
+  .p-profile{
+    margin: 32px auto 40px;
+
+    dl{
+      flex-direction: row;
+    }
+
+    dt{
+      width: 180px;
+      padding: 32px 0;
+      border-bottom: 1px solid setting.$color-main;
+    }
+
+    dd{
+      width: calc(100% - 180px);
+      padding: 32px 0;
+    }
+  }
+
+}

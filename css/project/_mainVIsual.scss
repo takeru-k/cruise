@@ -1,0 +1,230 @@
+@use "../setting/setting";
+
+.p-mainVisual__wrapper{
+  background: #DDDDDD;
+  padding: 40px 20px 42px;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-mainVisual__inner{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.p-mainVisual__heading{
+  position: relative;
+  z-index: 2;
+  line-height: 1.5;
+
+  p{
+    letter-spacing: .04em;
+    font-weight: bold;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-top: 24px;
+  }
+
+  h1{
+    font-size: 44px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 16px;
+    letter-spacing: .02em;
+    position: relative;
+
+    span{
+      margin-right: 4px;
+      margin-left: 2px;
+      color: setting.$color-main;
+    }
+
+    &:after{
+      position: absolute;
+      content: '';
+      bottom: -4px;
+      left: -10px;
+      width: 40px;
+      height: 40px;
+      background: setting.$color-accent;
+      z-index: -1;
+    }
+  }
+}
+
+.p-mainVisual__feature{
+  margin: 16px 0;
+  position: relative;
+  z-index: 2;
+
+  li{
+    position: relative;
+    color: #fff;
+    line-height: 1.4;
+    padding-left: 18px;
+    margin-bottom: 8px;
+
+    &:before{
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: url(../images/top/check.svg) no-repeat center
+        center/contain;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.p-mainVisual__img{
+  position: relative;
+  margin-top: 40px;
+}
+
+.p-mainVisual__btn{
+  margin-left: 0;
+}
+
+@media (max-width:1023px){
+
+.p-mainVisual__desc{
+  display: none;
+}
+}
+
+/*================================
+	tab
+=================================*/
+
+@media (min-width: 768px){
+  .p-mainVisual{
+    position: relative;
+
+    &:after{
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 200px;
+      background: linear-gradient(270deg, #12479C 0.01%, #00A7E5 99.96%);
+      z-index: -1;
+    }
+  }
+  .p-mainVisual__wrapper{
+    width: 94%;
+    position: relative;
+    margin-left: auto;
+
+
+
+  .p-mainVisual__inner{
+    display: flex;
+    max-width: 1440px;
+    padding-right: 3%;
+    padding-left: 3%;
+    margin: 0 auto;
+
+  }
+
+    .p-mainVisual__content{
+    width: 46%;
+  }
+
+  .p-mainVisual__img{
+    display: block;
+    width: 54%;
+    margin-top: -20px;
+    
+    img{
+      height: auto;
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .p-mainVisual__heading{
+    h1{
+      padding-top: 20px;
+    }
+    p{
+      line-height: 2;
+    }
+  }
+}
+
+.p-mainVisual__desc{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #34527e;
+  font-size: 12px;
+  letter-spacing: .2rem;
+  position: absolute;
+  top: 32%;
+  left: 2%;
+}
+
+
+/*================================
+	PC
+=================================*/
+
+@media (min-width: 1024px){
+  .p-mainVisual{
+    padding: 0 0 80px;
+  }
+
+  .p-mainVisual__heading{
+    p{
+      font-size: 20px;
+      margin-top: 40px;
+    }
+
+    h1{
+      font-size: 80px;
+
+      &:after{
+        bottom: 10px;
+      }
+    }
+
+  }
+}
+
+.p-mainVisual__wrapper{
+  padding: 64px 0;
+}
+}
+
+/*================================
+	アニメーション用CSS
+=================================*/
+.updown{
+  /* アニメーションの名前 */
+  animation-name:UpDown;
+  /* アニメーションの１回分の長さ */
+  animation-duration: 6s;
+  /* アニメーションの回数 */
+  animation-iteration-count: infinite;
+  /* アニメーションの進行具合 */
+  animation-timing-function: ease-in-out;
+  /* アニメーション再生の向き */
+  animation-direction: alternate;
+  }
+  /* アニメーションの設定 */
+  @keyframes UpDown{
+  /* 開始地点 */
+  0%{
+  /* Y軸0px */
+  transform: translateY(0);
+  }
+  /* 終了地点 */
+  100%{
+  /* Y軸50px */
+  transform: translateY(24px);
+  }
+}
