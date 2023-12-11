@@ -1682,10 +1682,13 @@ li {
     margin-bottom: 64px;
   }
 }
+.p-call {
+  margin-bottom: 64px;
+}
+
 .p-call__wrapper {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px 0;
 }
 .p-call__wrapper p {
   margin-bottom: 16px;
@@ -1735,7 +1738,7 @@ li {
     text-align: center;
   }
   .p-call__wrapper {
-    padding: 0 0 64px;
+    padding: 64px 0 64px;
   }
   .-mail a {
     font-size: 32px;

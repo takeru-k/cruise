@@ -1,9 +1,10 @@
 @use "../setting/setting";
-
+.p-call{
+  margin-bottom: 64px;
+}
 .p-call__wrapper{
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px 0;
 
   p{
     margin-bottom: 16px;
@@ -68,7 +69,7 @@
   }
 
   .p-call__wrapper{
-    padding: 0 0 64px;
+    padding: 64px 0 64px;
   }
 
   .-mail{
